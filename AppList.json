@@ -1,0 +1,40 @@
+{
+  "apps": [
+    {
+      "id": "voidsoft-demo",
+      "name": "VoidSoft Demo Pack",
+      "type": "game",
+      "version": "1.0.0",
+      "author": "bibobonking",
+      "date": "2026-08-20",
+      "description": "Demo pack for testing VoidSoft. Contains a README explaining how to add your own games, mods and apps to this store.",
+      "image_url": "",
+      "download_url": "https://github.com/bibobonking/AppList/releases/download/v1.0.0/VoidSoft-Demo-Pack.zip",
+      "file_size": 0
+    },
+    {
+      "id": "hollow-knight-noparticles",
+      "name": "No Particles Mod (Hollow Knight)",
+      "type": "mod",
+      "version": "1.5.12620",
+      "author": "bibobonking",
+      "date": "2026-08-20",
+      "description": "Removes particles from Hollow Knight for performance. Replace download_url with your own GitHub Release link.",
+      "image_url": "",
+      "download_url": "",
+      "file_size": 0
+    },
+    {
+      "id": "ultraspace",
+      "name": "UltraSpace",
+      "type": "app",
+      "version": "0.1.0",
+      "author": "bibobonking",
+      "date": "2026-08-20",
+      "description": "Your own app. Replace download_url with your GitHub Release link.",
+      "image_url": "",
+      "download_url": "",
+      "file_size": 0
+    }
+  ]
+}

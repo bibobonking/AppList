@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoidSoft Store</title>
+<style>
+  :root {
+    --bg: #0e1016; --panel: #151923; --card: #1c2130; --border: #2a3040;
+    --accent: #8a63d2; --text: #e8eaf2; --muted: #8b93a7;
+    --game: #4f8df0; --mod: #e8944a; --app: #4caf7d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: "Segoe UI", system-ui, sans-serif; }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px; background: var(--panel); border-bottom: 1px solid var(--border);
+  }
+  header h1 { color: var(--accent); font-size: 22px; letter-spacing: 0.5px; }
+  #filters { display: flex; gap: 8px; }
+  #filters button {
+    background: var(--card); color: var(--text); border: 1px solid var(--border);
+    border-radius: 6px; padding: 7px 16px; cursor: pointer; font-size: 14px;
+  }
+  #filters button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  #grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px; padding: 22px 28px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card h3 { font-size: 16px; }
+  .badges { display: flex; gap: 6px; flex-wrap: wrap; }
+  .badge {
+    font-size: 12px; padding: 2px 8px; border-radius: 5px;
+    border: 1px solid; background: rgba(255,255,255,0.06);
+  }
+  .badge.game { color: var(--game); border-color: var(--game); }
+  .badge.mod { color: var(--mod); border-color: var(--mod); }
+  .badge.app { color: var(--app); border-color: var(--app); }
+  .badge.gray { color: var(--muted); border-color: var(--muted); }
+  .card p { color: var(--muted); font-size: 13px; line-height: 1.5; flex: 1; }
+  .card a {
+    display: inline-block; text-align: center; background: var(--accent); color: #fff;
+    text-decoration: none; border-radius: 6px; padding: 8px 0; font-size: 14px;
+  }
+  .card a.disabled { background: #333a4d; cursor: not-allowed; }
+  #status { padding: 0 28px 8px; color: var(--muted); font-size: 13px; }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; font-size: 15px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>VoidSoft Store</h1>
+  <div id="filters">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="game">Games</button>
+    <button data-filter="mod">Mods</button>
+    <button data-filter="app">Apps</button>
+  </div>
+</header>
+<div id="status">Loading...</div>
+<div id="grid"></div>
+<footer>VoidSoft &copy; bibobonking &middot; Powered by GitHub Pages</footer>
+<script src="logic.js"></script>
+</body>
+</html>
